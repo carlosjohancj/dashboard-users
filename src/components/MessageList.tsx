@@ -7,7 +7,7 @@ import { useAppStore } from '@/store/app-store'
 import type { Message } from '@/store/app-store'
 
 export function MessageList() {
-  const { messages, addMessage, markMessageAsRead, creators, user } = useAppStore()
+  const { messages, addMessage, creators, user } = useAppStore()
   const [newMessage, setNewMessage] = useState('')
   const [selectedCreator, setSelectedCreator] = useState(creators[0]?.id || '')
 

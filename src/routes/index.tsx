@@ -21,7 +21,7 @@ import {
 
 export const Route = createFileRoute('/')({
   component: DashboardPage,
-  beforeLoad: ({ context }) => {
+  beforeLoad: () => {
     const authStore = useAuthStore.getState()
     if (!authStore.isAuthenticated) {
       throw redirect({ to: '/login' })

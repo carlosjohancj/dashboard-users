@@ -75,7 +75,7 @@ interface AppState {
 
 export const useAppStore = create<AppState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       user: {
         id: '1',
         name: 'Usuario VIP',

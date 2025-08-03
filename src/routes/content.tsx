@@ -12,9 +12,7 @@ import {
   Heart, 
   Eye, 
   DollarSign,
-  Star,
-  Clock,
-  User
+  Star
 } from 'lucide-react'
 
 export const Route = createFileRoute('/content')({

@@ -21,7 +21,7 @@ interface AuthState {
 
 export const useAuthStore = create<AuthState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       user: null,
       isAuthenticated: false,
       isLoading: false,
@@ -83,7 +83,8 @@ export const useAuthStore = create<AuthState>()(
       register: async (name: string, email: string, password: string) => {
         set({ isLoading: true })
         
-        // Simulación de registro
+        // Simulación de registro - en producción esto sería una llamada a la API
+        // password se usaría para validación en el backend
         await new Promise(resolve => setTimeout(resolve, 1000))
         
         const user: User = {

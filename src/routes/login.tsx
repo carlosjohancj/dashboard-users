@@ -11,7 +11,7 @@ import { Eye, EyeOff, Lock, Mail, User, Loader2 } from 'lucide-react'
 
 export const Route = createFileRoute('/login')({
   component: LoginPage,
-  beforeLoad: ({ context }) => {
+  beforeLoad: () => {
     const authStore = useAuthStore.getState()
     if (authStore.isAuthenticated) {
       throw redirect({ to: '/' })
