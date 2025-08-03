@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import { useAuthStore } from '@/store/auth-store'
-import { Crown, LogOut, User } from 'lucide-react'
+import { Crown, LogOut } from 'lucide-react'
 
 export default function Header() {
   const { user, isAuthenticated, logout } = useAuthStore()
