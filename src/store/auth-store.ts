@@ -84,7 +84,12 @@ export const useAuthStore = create<AuthState>()(
         set({ isLoading: true })
         
         // Simulación de registro - en producción esto sería una llamada a la API
-        // password se usaría para validación en el backend
+        // Validamos que el password tenga al menos 6 caracteres
+        if (password.length < 6) {
+          set({ isLoading: false })
+          return false
+        }
+        
         await new Promise(resolve => setTimeout(resolve, 1000))
         
         const user: User = {
